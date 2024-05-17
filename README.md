@@ -24,7 +24,7 @@ Telegram交流群：[@CMLiussss](https://t.me/CMLiussss)
 
 ## 风险提示
 - 通过提交虚假的节点配置给订阅服务，避免节点配置信息泄露。
-- 另外，您也可以选择自行部署 [WorkerTrojan2sub 订阅生成服务](https://github.com/cmliu/WorkerTrojan2sub)，这样既可以利用订阅生成器的便利。
+- 另外，您也可以选择自行部署 [WorkerVless2sub 订阅生成服务](https://github.com/cmliu/WorkerVless2sub)，这样既可以利用订阅生成器的便利。
 
 ## Workers 部署方法 [视频教程](https://youtu.be/MBlAqYajVSY)
 1. 部署 Cloudflare Worker：
@@ -49,7 +49,7 @@ Telegram交流群：[@CMLiussss](https://t.me/CMLiussss)
      ```
 
 3. 访问订阅内容：
-   - 访问 `https://[YOUR-WORKERS-URL]/[password]` 即可获取订阅内容。
+   - 访问 `https://[YOUR-WORKERS-URL]/[PASSWORD]` 即可获取订阅内容。
    - 例如 `https://vless.google.workers.dev/auto` 就是你的通用自适应订阅地址。
    - 例如 `https://vless.google.workers.dev/auto?sub` Base64订阅格式，适用PassWall,SSR+等。
    - 例如 `https://vless.google.workers.dev/auto?clash` Clash订阅格式，适用OpenClash等。
@@ -82,7 +82,7 @@ Telegram交流群：[@CMLiussss](https://t.me/CMLiussss)
    ```
 
 3. 访问订阅内容：
-   - 访问 `https://[YOUR-PAGES-URL]/[password]` 即可获取订阅内容。
+   - 访问 `https://[YOUR-PAGES-URL]/[PASSWORD]` 即可获取订阅内容。
    - 例如 `https://epeius.pages.dev/auto` 就是你的通用自适应订阅地址。
    - 例如 `https://epeius.pages.dev/auto?sub` Base64订阅格式，适用PassWall,SSR+等。
    - 例如 `https://epeius.pages.dev/auto?clash` Clash订阅格式，适用OpenClash等。
@@ -117,7 +117,7 @@ Telegram交流群：[@CMLiussss](https://t.me/CMLiussss)
    ```
 
 3. 访问订阅内容：
-   - 访问 `https://[YOUR-PAGES-URL]/[password]` 即可获取订阅内容。
+   - 访问 `https://[YOUR-PAGES-URL]/[PASSWORD]` 即可获取订阅内容。
    - 例如 `https://epeius.pages.dev/auto` 就是你的通用自适应订阅地址。
    - 例如 `https://epeius.pages.dev/auto?sub` Base64订阅格式，适用PassWall,SSR+等。
    - 例如 `https://epeius.pages.dev/auto?clash` Clash订阅格式，适用OpenClash等。
@@ -137,13 +137,13 @@ Telegram交流群：[@CMLiussss](https://t.me/CMLiussss)
 | PROXYIP | proxyip.fxxk.dedyn.io | 备选作为访问CloudFlareCDN站点的代理节点(支持多ProxyIP, ProxyIP之间使用`,`或 换行 作间隔) |
 | SOCKS5  | user:password@127.0.0.1:1080 | 优先作为访问CloudFlareCDN站点的SOCKS5代理 |
 | ADD | www.csgo.com:2087,icook.hk | 本地优选域名/优选IP(支持多元素之间`,`或 换行 作间隔) |
-| ADDAPI |  | 不解释, 懂得都懂 |
-| ADDCSV |  | 不解释, 懂得都懂 |
-| DLS | 8 | 不解释, 懂得都懂 | 
+| ADDAPI | [https://raw.github.../addressesapi.txt](https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt) | 不解释, 懂得都懂 |
+| ADDCSV | [https://raw.github.../addressescsv.csv](https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressescsv.csv) | 不解释, 懂得都懂 |
+| DLS | 8 | `ADDCSV`测速结果满足速度下限 | 
 | TGTOKEN | 6894123456:XXXXXXXXXX0qExVsBPUhHDAbXXXXXqWXgBA | 发送TG通知的机器人token | 
 | TGID | 6946912345 | 接收TG通知的账户数字ID | 
 | SUB | trojan.fxxk.dedyn.io | 优选订阅生成器地址(使用订阅器将放弃`ADD`内的本地优选订阅内容) |
-| SUBAPI | apiurl.v1.mk | clash、singbox等 订阅转换后端 |
+| SUBAPI | url.v1.mk | clash、singbox等 订阅转换后端 |
 | SUBCONFIG | [https://raw.github.../ACL4SSR_Online_Mini.ini](https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/config/ACL4SSR_Online_Mini.ini) | clash、singbox等 订阅转换配置文件 |
 | SUBNAME | epeius | 订阅名称 | 
 | RPROXYIP | false | 设为 true 即可强制获取订阅器分配的ProxyIP(需订阅器支持)|
